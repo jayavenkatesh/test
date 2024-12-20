@@ -19,7 +19,10 @@ public class quizcontroller {
 	
 	@Autowired
 	quizservice qserv;
-	
+	@GetMapping("/hello")
+	public String mine(){
+		return "Hello";
+	}
 	@PostMapping("/create")
 	public ResponseEntity<String> createquiz(@RequestParam String catagory,@RequestParam int num,@RequestParam String title){
 		
